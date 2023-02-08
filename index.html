@@ -1,1 +1,122 @@
-<h1>Hello World!</h1>
+<html>
+<head>
+   <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
+
+  <style type="text/css">
+   div.group
+   {
+		background-color: Azure;
+		padding: 5px;
+		margin: 5px;
+		display: inline-block;
+		border-style: solid;
+		border-width: 1px;
+
+   }
+   div.func
+   {
+		background-color: Yellow;
+		padding: 5px;
+		margin: 5px;
+		width: 110px;
+		text-align: center;
+   }
+   div.system
+   {
+		background-color: CornflowerBlue;
+		color: white;		
+		padding: 2px;
+		margin: 3px;
+		text-align: center;
+		width: 100px;
+		border: 1px;
+		border-color: black;
+   }
+  </style>
+</head>
+<body>
+
+ <pre id="readout">Waiting for data...</pre>
+    <script>
+      grist.ready();
+      grist.onRecord(function(record) {
+        document.getElementById('readout').innerHTML = JSON.stringify(record, null, 2);
+      });
+    </script>
+
+<div class='group'>
+<div>Прикладные системы</div>
+ <div class='group'>
+  <div>Транзакции</div>
+  <div class='func'>
+   <div>Процессинг</div>
+   <div class='system'>
+    Way4
+   </div>
+   <div class='system'>
+    MassPay
+   </div>
+  </div>
+  
+  <div class='func'>
+   <div>Эквайринг</div>
+   <div class='system'>
+    Way4
+   </div>
+   <div class='system'>
+    MassPay
+   </div>
+  </div>
+  
+ </div>
+ 
+  <div class='group'>
+  <div>Транзакции</div>
+  <div class='func'>
+   <div>Процессинг</div>
+   <div class='system'>
+    Way4
+   </div>
+   <div class='system'>
+    MassPay
+   </div>
+  </div>
+  
+  <div class='func'>
+   <div>Эквайринг</div>
+   <div class='system'>
+    Way4
+   </div>
+   <div class='system'>
+    MassPay
+   </div>
+  </div>
+  
+ </div>
+ 
+  <div class='group'>
+  <div>Транзакции</div>
+  <div class='func'>
+   <div>Процессинг</div>
+   <div class='system'>
+    Way4
+   </div>
+   <div class='system'>
+    MassPay
+   </div>
+  </div>
+  
+  <div class='func'>
+   <div>Эквайринг</div>
+   <div class='system'>
+    Way4
+   </div>
+   <div class='system'>
+    MassPay
+   </div>
+  </div>
+  
+ </div>
+</div>
+</body>
+</html>
